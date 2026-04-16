@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-uw: 2000px;
+}
+
+@font-face {
+  font-family: 'BebasKai';
+  src: url('/fonts/BebasKai.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  /* Remove a barra de rolagem de todo o documento */
+  html {
+    font-family: 'BebasKai', sans-serif;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
+  }
+
+  /* Seu código para inputs numéricos */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

@@ -1,0 +1,15 @@
+# Pasta de dependências
+node_modules/
+
+# Segurança: Nunca subir o .env real
+.env
+.env.local
+
+# Arquivos de Build
+dist/
+build/
+
+# Sistema e IDEs
+.vscode/
+.DS_Store
+Thumbs.db
