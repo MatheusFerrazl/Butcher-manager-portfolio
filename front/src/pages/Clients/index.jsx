@@ -53,7 +53,7 @@ function Clients() {
         return setError(true);
       }
 
-      const response = await fetch("https://butcher-manager.onrender.com/addClient", {
+      const response = await fetch("http://localhost:8000/addClient", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +85,7 @@ function Clients() {
         return setError(true);
       }
 
-      const response = await fetch("https://butcher-manager.onrender.com/updateClient", {
+      const response = await fetch("http://localhost:8000/updateClient", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ function Clients() {
 
       if (!data?.id) return;
 
-      const response = await fetch("https://butcher-manager.onrender.com/deleteClient", {
+      const response = await fetch("http://localhost:8000/deleteClient", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -83,7 +83,7 @@ function FormNewSale({ meatList = [], clientList = [] }) {
     };
 
     try {
-      const response = await fetch("https://butcher-manager.onrender.com/addSale", {
+      const response = await fetch("http://localhost:8000/addSale", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

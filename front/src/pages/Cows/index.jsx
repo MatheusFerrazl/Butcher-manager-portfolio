@@ -28,7 +28,7 @@ function Cows() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const response = await fetch("https://butcher-manager.onrender.com/addCow", {
+      const response = await fetch("http://localhost:8000/addCow", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function Cows() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const response = await fetch("https://butcher-manager.onrender.com/updateCow", {
+      const response = await fetch("http://localhost:8000/updateCow", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ function Cows() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const response = await fetch("https://butcher-manager.onrender.com/killCow", {
+      const response = await fetch("http://localhost:8000/killCow", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -103,7 +103,7 @@ function Cows() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const response = await fetch("https://butcher-manager.onrender.com/deleteCow", {
+      const response = await fetch("http://localhost:8000/deleteCow", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ function Cows() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const request = await fetch("https://butcher-manager.onrender.com/cows", {
+      const request = await fetch("http://localhost:8000/cows", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

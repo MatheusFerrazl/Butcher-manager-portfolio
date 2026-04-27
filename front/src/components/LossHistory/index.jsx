@@ -7,7 +7,7 @@ function LossHistory({ selectedDate, selectedMonth, onTotalChange }) {
     try {
       const token = sessionStorage.getItem("token");
 
-      const response = await fetch("https://butcher-manager.onrender.com/losses", {
+      const response = await fetch("http://localhost:8000/losses", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,6 @@ function LossHistory({ selectedDate, selectedMonth, onTotalChange }) {
     0,
   );
 
-  // IMPORTANTE: Envia o valor calculado de volta para o componente pai (SaleHistory)
   useEffect(() => {
     if (onTotalChange) onTotalChange(totalValueLoss);
   }, [totalValueLoss]);

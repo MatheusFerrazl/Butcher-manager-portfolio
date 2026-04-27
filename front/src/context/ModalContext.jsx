@@ -13,7 +13,7 @@ export function ModalProvider({ children }) {
     try {
       const token = sessionStorage.getItem("token");
 
-      const request = await fetch("https://butcher-manager.onrender.com/meats", {
+      const request = await fetch("http://localhost:8000/meats", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export function ModalProvider({ children }) {
     try {
       const token = sessionStorage.getItem("token");
 
-      const request = await fetch("https://butcher-manager.onrender.com/clients", {
+      const request = await fetch("http://localhost:8000/clients", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

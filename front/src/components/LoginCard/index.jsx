@@ -16,7 +16,7 @@ function LoginCard() {
 
   async function validate(data) {
     try {
-      const response = await fetch("https://butcher-manager.onrender.com/validate", {
+      const response = await fetch("http://localhost:8000/validate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

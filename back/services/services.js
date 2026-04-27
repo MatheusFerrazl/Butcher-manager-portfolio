@@ -369,7 +369,6 @@ async function deleteMeat({ id }) {
 
 async function deleteClient({ id }) {
   try {
-    // Com ON DELETE CASCADE, o banco faz o trabalho pesado sozinho!
     const query = "DELETE FROM clients WHERE id = $1 RETURNING *";
     const result = await pool.query(query, [id]);
 

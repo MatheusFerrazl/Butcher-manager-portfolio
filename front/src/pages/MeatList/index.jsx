@@ -44,7 +44,7 @@ function MeatList() {
         return setError(true);
       }
 
-      await fetch("https://butcher-manager.onrender.com/addMeat", {
+      await fetch("http://localhost:8000/addMeat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function MeatList() {
       return setError(true);
     }
 
-    const response = await fetch("https://butcher-manager.onrender.com/updateMeat", {
+    const response = await fetch("http://localhost:8000/updateMeat", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -100,7 +100,7 @@ function MeatList() {
 
     if (!data?.id) return;
 
-    const response = await fetch("https://butcher-manager.onrender.com/deleteMeat", {
+    const response = await fetch("http://localhost:8000/deleteMeat", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

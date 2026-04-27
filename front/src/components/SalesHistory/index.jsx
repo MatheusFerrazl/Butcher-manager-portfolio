@@ -27,7 +27,7 @@ function SalesHistory() {
     try {
       const token = sessionStorage.getItem("token");
 
-      const res = await fetch("https://butcher-manager.onrender.com/sales", {
+      const res = await fetch("http://localhost:8000/sales", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,7 @@ function SalesHistory() {
     }
 
     try {
-      await fetch("https://butcher-manager.onrender.com/addPayment", {
+      await fetch("http://localhost:8000/addPayment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
