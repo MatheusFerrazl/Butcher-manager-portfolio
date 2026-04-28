@@ -13,18 +13,35 @@
 }
 
 @layer base {
-  /* Remove a barra de rolagem de todo o documento */
   html {
     font-family: 'BebasKai', sans-serif;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+
+    /* FORÇA a barra de rolagem sempre aparecer */
+    overflow-y: scroll;
+
+    /* Firefox */
+    scrollbar-width: auto;
   }
 
+  /* Chrome, Edge, Safari */
   html::-webkit-scrollbar {
-    display: none; /* Chrome, Safari e Opera */
+    width: 10px;
   }
 
-  /* Seu código para inputs numéricos */
+  html::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Remove setinhas do input number */
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
