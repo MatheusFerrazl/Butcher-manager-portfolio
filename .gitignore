@@ -1,15 +1,20 @@
-# Pasta de dependências
+# Dependencies
 node_modules/
 
-# Segurança: Nunca subir o .env real
-.env
-.env.local
+# Environment variables
+.env*
+!.env.example
 
-# Arquivos de Build
+# Build files
 dist/
 build/
 
-# Sistema e IDEs
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System / IDE
 .vscode/
 .DS_Store
 Thumbs.db
